@@ -1,0 +1,18 @@
+[package]
+name = "zenonet_native"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.30"
+rustler-sys = "0.30"
+libc = "0.2"
+
+[build-dependencies]
+rustler-codegen = "0.30"
+rustler-build = "0.30"
+cc = "1.0"

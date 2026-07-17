@@ -8,7 +8,7 @@ kinda works? most of the time? depends on your definition of "works"
 
 a simple TCP networking library. has both C and C++ APIs because i couldnt decide which one to use. server, client, rooms, packets, the whole deal.
 
-built this in like a weekend so the code quality varies wildly between files. some parts are ok, others are held together by string and prayers.
+built this in like a weekend so the code quality varies between files. some parts are ok, others are held together by string and prayers.
 
 ## building
 
@@ -45,25 +45,6 @@ srv.on_connect([](zenonet::Connection &conn) {
 });
 srv.start();
 ```
-
-## files
-
-```
-ZenoNet/
-├── include/zenonet.h
-├── src/
-│   ├── packet.c
-│   ├── connection.c
-│   ├── room.c
-│   ├── server.c
-│   ├── client.c
-│   └── zenonet_cpp.cpp
-├── examples/
-│   ├── chat_example.c
-│   └── game_example.cpp
-└── CMakeLists.txt
-```
-
 ## stuff that needs fixing
 
 - the server read loop loses the server reference (oops)
